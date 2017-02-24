@@ -25,7 +25,8 @@ public:
 		delayMicroseconds(10); 
 
 		float pingTime = pulseIn(_echoPin, HIGH);
-		return mcSec2in(pingTime);
+		float lenInInch = mcSec2in(pingTime);
+		return in2cm(lenInInch);
 	}
 
 private:
@@ -44,6 +45,11 @@ private:
 		targetDistance = targetDistance * 63360;		  //distance in inches (63360 inches per mile)
 
 		return targetDistance;
+	}
+
+	float in2cm(float in)
+	{
+		return in * 2.54;
 	}
 };
 
