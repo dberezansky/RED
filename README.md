@@ -1,2 +1,2 @@
-# RED
-Robotic Electric Device
+# REV
+Robotic Electric Vehicle
